@@ -4,9 +4,8 @@
 #include <stdlib.h>
 #include <errno.h>
 
-Mem* initMem()
+void initMem(Mem *mem)
 {
-  Mem* mem = (Mem*)malloc(sizeof(Mem));
   for (int i=0; i<N-1; i++){
     mem->key[i] = mem->left[i] = mem->right[i] = -1;
     mem->nextInFreeList[i] = i+1;

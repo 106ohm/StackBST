@@ -31,7 +31,7 @@ typedef struct Mem {
   int freeListHead;     
 } Mem;
 
-Mem* initMem();
+void initMem(Mem*);
 int newNode(Mem*, double);
 void freeNode(Mem*, int);
 void inorder(Mem*, int);
